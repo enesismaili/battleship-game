@@ -1,0 +1,81 @@
+.board {
+  width: 400px;
+  height: 400px;
+  border: 5px solid #25567B;;
+  margin: 1em 2em 2em 1em;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board div {
+  width: 10%;
+  height: 10%;
+  box-sizing: border-box;
+  background: #f1f3f5;
+  border: 1px solid #25567B;
+  cursor: move;
+  transition: background-color 100ms ease-in-out;
+}
+
+.board .enemy-square {
+  cursor: url("../images/crosshair.png") 16 16, crosshair !important;
+}
+.board .isHit:hover {
+  background-color: #66A3D2;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: translate(30%, 17%);
+  }
+
+  to {
+    transform: translate(-30%, -17%);
+  }
+}
+
+.board .empty {
+  background-color: #99C2E1;
+}
+.board .empty:hover {
+  background-color: #ffec99;
+}
+
+.board .ship {
+  background-color: #808080;
+  border: 1px solid #25567B;
+}
+
+.board .ship:hover {
+  background-color: #808080;
+}
+
+.board .hit {
+  background-color: #e03131;
+  border: 1px solid #c92a2a;
+}
+
+.board .miss {
+  background-color: #ced4da;
+}
+
+.board .ship-sunk {
+  background-color: #212529;
+  border: 1px solid #343a40;
+  animation: shake 50ms 6 alternate backwards;
+}
+
+.board .forbidden {
+  background-color: #ffc9c9;
+  border: 1px solid #ffa8a8;
+}

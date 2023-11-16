@@ -1,0 +1,90 @@
+@import './board.css';
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Lexend+Tera&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul&family=Chivo:wght@300;400;700;900&family=Libre+Franklin&display=swap');
+
+:root {
+  --regular: 'Libre Franklin', sans-serif;
+  --headlines: 'Asul', sans-serif;
+  --header: 'Chivo', sans-serif;
+  --small-space: 1em;
+  --medium-space: 2em;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body,
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--small-space);
+}
+
+main,
+section {
+  margin: var(--medium-space);
+  text-align: center;
+}
+
+main {
+  max-width: 35em;
+}
+
+
+#game-over {
+  font-size: 30px;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  color: #3b5bdb;
+  font-size: 38px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--header);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+button {
+  height: 50px;
+  border-radius: 3px;
+  font-family: var(--regular);
+  font-size: 16px;
+  margin: var(--small-space);
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
